@@ -25,8 +25,6 @@ namespace RoverChallenge.Util
 
         private static void GetRoverInputs(List<string> martianInputs, List<RoverInputs> roverInputs)
         {
-            if(roverInputs.Count %2 == 0 || martianInputs.Count == 1)
-                throw new Exception("Rovers Input Corrupted");
             for (var roverIndex = 1; roverIndex < martianInputs.Count; roverIndex = roverIndex + 2)
             {
                 var roverPosition = martianInputs[roverIndex].Trim().Split(' ');
